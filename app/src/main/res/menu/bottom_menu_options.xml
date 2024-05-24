@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/parkMap"
+        android:icon="@drawable/baseline_park_24"
+        android:title="PARKS"></item>
+    <item
+        android:id="@+id/itineraryFragment"
+        android:icon="@drawable/baseline_playlist_add_check_24"
+        android:title="MY LIST"></item>
+
+</menu>

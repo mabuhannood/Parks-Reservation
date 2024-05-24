@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/parkMap">
+
+    <fragment
+        android:id="@+id/itineraryFragment"
+        android:name="com.example.project_g06.views.ItineraryFragment"
+        android:label="MY RESERVATIONS LIST"
+        tools:layout="@layout/fragment_itinerary" >
+        <action
+            android:id="@+id/action_itineraryFragment_to_itineraryFragment2"
+            app:destination="@id/itineraryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/itineraryFragment2"
+        android:name="com.example.project_g06.views.ItineraryFragment2"
+        android:label="EDIT RESERVATION"
+        tools:layout="@layout/fragment_itinerary2" >
+        <argument
+            android:name="selectedReservation"
+            app:argType="com.example.project_g06.models.Reservation" />
+        <action
+            android:id="@+id/action_itineraryFragment2_to_itineraryFragment"
+            app:destination="@id/itineraryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkMap"
+        android:name="com.example.project_g06.views.parkMap"
+        android:label="PARKS MAP" >
+        <action
+            android:id="@+id/action_parkMap_to_parkDetails"
+            app:destination="@id/parkDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkDetails"
+        android:name="com.example.project_g06.views.parkDetails"
+        android:label="PARK DETAILS"
+        tools:layout="@layout/fragment_park_details" >
+        <argument
+            android:name="parkName"
+            app:argType="string" />
+        <argument
+            android:name="parkDescription"
+            app:argType="string" />
+        <argument android:name="parkURL"
+            app:argType="string" />
+        <argument
+            android:name="parkImage"
+            app:argType="string" />
+        <argument
+            android:name="parkAddress"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_parkDetails_to_parkMap"
+            app:destination="@id/parkMap" />
+    </fragment>
+</navigation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:background="@drawable/my_border"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <TextView
+        android:id="@+id/tv_park_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Park Name"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_park_name"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_trip_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trip Date"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_location"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
